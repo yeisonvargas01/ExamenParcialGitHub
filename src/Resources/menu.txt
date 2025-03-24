@@ -1,0 +1,6 @@
+ID|NAME|CATEGORY|PRICE|TYPE
+1|Ensalada|entrada|15000|dish
+2|Lasaña de Carne|plato fuerte|28000|dish
+3|Coca Cola|bebida|5000|drink
+4|Cerveza Artesanal|bebida alcohólica|12000|drink
+5|Helado de Vainilla|postre|7000|dish
