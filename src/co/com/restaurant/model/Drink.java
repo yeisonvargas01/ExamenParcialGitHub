@@ -12,7 +12,7 @@ public class Drink extends Menu {
 
     /**
      * Ejemplo de Polimorfismo: sobrescribimos el método
-     * calculateFinalPrice() de la clase abstracta MenuItem.
+     * calculateFinalPrice() de la clase abstracta Menu.
      * Podríamos simular un recargo, por ejemplo,
      * 5% adicional si la bebida es alcohólica
      * (dependería de la categoría).
