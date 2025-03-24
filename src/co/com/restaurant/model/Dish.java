@@ -14,8 +14,6 @@ public class Dish extends Menu {
      * Ejemplo de Polimorfismo: sobrescribimos el método
      * calculateFinalPrice() de la clase abstracta MenuItem.
      * Aquí no aplicamos recargo, retornamos el precio normal.
-     * Si quisieras manejar IVA extra o algo similar, podrías
-     * aplicarlo en este método.
      */
     @Override
     public double calculateFinalPrice() {

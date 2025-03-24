@@ -39,7 +39,7 @@ public abstract class Menu {
     /**
      * Ejemplo de método que podría ser sobrescrito
      * para calcular algún recargo distinto dependiendo
-     * del tipo de producto (Dish o Beverage).
+     * del tipo de producto (Dish o Drink).
      */
     public abstract double calculateFinalPrice();
 

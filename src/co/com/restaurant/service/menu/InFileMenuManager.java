@@ -40,7 +40,7 @@ public class InFileMenuManager implements MenuRepository {
                     String name = data[1];
                     String category = data[2];
                     double price = Double.parseDouble(data[3]);
-                    String type = data[4]; // "dish" o "beverage"
+                    String type = data[4]; // "dish" o "drink"
 
                     Menu item;
                     if ("dish".equalsIgnoreCase(type)) {

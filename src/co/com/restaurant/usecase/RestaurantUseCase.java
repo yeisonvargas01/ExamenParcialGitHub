@@ -94,7 +94,7 @@ public class RestaurantUseCase {
      * Cancela un pedido si todavía no fue entregado.
      */
     public boolean cancelOrder(int tableNumber) {
-        // Borramos del repositorio solo si no está entregado
+        // se elimina solo si no está entregado
         return orderRepository.removeOrder(tableNumber);
     }
 }

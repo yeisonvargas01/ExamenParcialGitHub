@@ -2,7 +2,7 @@ package co.com.restaurant.model;
 
 /**
  * Clase que representa una Bebida en el menú.
- * Extiende de MenuItem.
+ * Extiende de Menu.
  */
 public class Drink extends Menu {
 

@@ -42,7 +42,7 @@ public class RestaurantApp {
                     // Realizar pedido
                     System.out.print("Número de mesa: ");
                     int tableNumber = Integer.parseInt(scanner.nextLine());
-                    // Creamos (o recuperamos) el pedido
+                    // Creamos el pedido
                     Order order = useCase.createOrder(tableNumber);
                     System.out.println("Pedido creado para mesa #" + tableNumber);
 
