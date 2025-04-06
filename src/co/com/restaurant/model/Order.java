@@ -78,8 +78,6 @@ public class Order {
     public String toString() {
         return "Pedido mesa #" + tableNumber
                 + " | Items: " + items.size()
-                + " | Entregado: " + delivered
-                + " | Cancelado: " + canceled
                 + " | Descuento: " + discountPercent + "%";
     }
 }
