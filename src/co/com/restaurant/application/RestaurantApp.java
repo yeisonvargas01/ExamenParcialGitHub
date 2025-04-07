@@ -42,7 +42,15 @@ public class RestaurantApp {
                     // Realizar pedido
                     System.out.print("Número de mesa: ");
                     int tableNumber = Integer.parseInt(scanner.nextLine());
-                    // Creamos el pedido
+
+                    // Validar que el número de mesa sea positivo
+                    if (tableNumber <= 0) {
+                        System.out.println("Número de mesa inválido. Ingrese un número de mesa valida.");
+                        // Aquí podrías hacer un continue para que el usuario intente de nuevo:
+                        continue;
+                    }
+
+                    // Si es válido, entonces creamos el pedido
                     Order order = useCase.createOrder(tableNumber);
                     System.out.println("Pedido creado para mesa #" + tableNumber);
 
@@ -62,15 +70,32 @@ public class RestaurantApp {
                         }
                     }
                 }
+
                 case 3 -> {
                     // Ver pedidos activos
                     List<Order> orders = useCase.getActiveOrders();
                     if (orders.isEmpty()) {
                         System.out.println("No hay pedidos activos.");
                     } else {
-                        orders.forEach(System.out::println);
+                        // Iteramos cada pedido
+                        for (Order order : orders) {
+                            // Primero imprimimos la información básica del pedido
+                            System.out.println(order.toString());
+
+                            // Luego imprimimos el detalle de sus ítems
+                            if (!order.getItems().isEmpty()) {
+                                System.out.println("  Detalles del pedido:");
+                                for (Menu item : order.getItems()) {
+                                    System.out.println("    - " + item.getName()
+                                            + " (" + item.getCategory() + ") - $" + item.getPrice());
+                                }
+                            } else {
+                                System.out.println("  (Este pedido no tiene ítems todavía)");
+                            }
+                        }
                     }
                 }
+
                 case 4 -> {
                     // Cerrar un pedido
                     System.out.print("Número de mesa a cerrar: ");
